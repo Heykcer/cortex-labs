@@ -32,7 +32,7 @@
   transition: transform 0.3s ease;
   animation: float 3s ease-in-out infinite;
   position: absolute;
-  left: 4.5rem;
+  left: 6rem;
 }
 
 .logo:hover {
@@ -69,6 +69,7 @@
   margin: 0;
   padding: 0;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .nav-links li {
@@ -78,7 +79,7 @@
 .nav-links a {
   text-decoration: none;
   color: #E0E0E0;
-  font-size: 0.95rem;
+  font-size: 1.3rem;
   font-weight: 500;
   position: relative;
   transition: all 0.3s ease;
@@ -143,6 +144,38 @@
   .nav-links a {
     font-size: 0.85rem;
   }
+}
+
+/* Highlighted Join Us button */
+.join-btn {
+  background: linear-gradient(135deg, #1a0a2e 0%, #16213e 50%, #0f3460 100%) !important;
+  padding: 0.6em 1.5em !important;
+  border-radius: 8px !important;
+  border: 2px solid rgba(0, 242, 254, 0.6) !important;
+  color: #00f2fe !important;
+  font-weight: 700 !important;
+  box-shadow: 0 0 20px rgba(0, 242, 254, 0.4), inset 0 0 15px rgba(0, 242, 254, 0.1) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  text-shadow: 0 0 8px rgba(0, 242, 254, 0.5) !important;
+  position: relative;
+  right: -15rem;
+  /* margin-left: 80px !important; */
+}
+
+.join-btn::after {
+  display: none !important;
+}
+
+.join-btn::before {
+  display: none !important;
+}
+
+.join-btn:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 0 30px rgba(0, 242, 254, 0.7), 0 0 15px rgba(118, 75, 162, 0.5), inset 0 0 20px rgba(0, 242, 254, 0.2) !important;
+  border-color: rgba(0, 242, 254, 1) !important;
+  background: linear-gradient(135deg, #0f3460 0%, #16213e 50%, #1a0a2e 100%) !important;
+  color: #fff !important;
 }
 
 @media (max-width: 640px) {
