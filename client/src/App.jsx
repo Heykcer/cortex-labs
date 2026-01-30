@@ -1,5 +1,6 @@
 
 import "./App.css";
+import logoImg from "./assets/logo2.png";
 
 function App() {
   return (
@@ -7,7 +8,7 @@ function App() {
       <header className="header">
         <nav className="navbar">
           <div className="logo">
-             logo
+            <img src={logoImg} alt="Logo" />
           </div>
 
           <ul className="nav-links">
