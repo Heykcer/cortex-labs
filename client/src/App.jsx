@@ -1,4 +1,4 @@
-
+//import logo from "./assets/logo.png";
 import "./App.css";
 
 function App() {
@@ -7,7 +7,8 @@ function App() {
       <header className="header">
         <nav className="navbar">
           <div className="logo">
-             logo
+             <img src="/assets/logo.png" alt="Logo" />
+
           </div>
 
           <ul className="nav-links">
@@ -20,7 +21,7 @@ function App() {
       </header>
 
       <main>
-        {/* Page content */}
+        
       </main>
     </>
   );

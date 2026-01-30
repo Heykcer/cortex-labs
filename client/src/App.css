@@ -2,16 +2,16 @@ body {
   min-height: 100vh;
   margin: 0;
 
-  /* Dark base + neon highlights */
+  
   background:
     radial-gradient(
       circle at top left,
-      rgba(0, 255, 255, 0.15),   /* neon cyan */
+      rgba(0, 255, 255, 0.15),   
       transparent 40%
     ),
     radial-gradient(
       circle at bottom right,
-      rgba(255, 0, 255, 0.1),    /* neon magenta */
+      rgba(255, 0, 255, 0.1),    
       transparent 45%
     ),
     linear-gradient(
@@ -21,7 +21,7 @@ body {
       #1a1a1a
     );
 
-  background-size: 400% 400%;  /* important for smooth animation */
+  background-size: 400% 400%;  
   animation: gradientMove 25s ease infinite;
 }
 @keyframes gradientMove {
@@ -35,9 +35,9 @@ body {
     background-position: 0% 50%;
   }
 }
-/* Header wrapper */
+/* Header  */
 .header {
-  position: fixed;   /* stays on top */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -45,7 +45,7 @@ body {
   padding: 1rem 2rem;
 }
 
-/* Navbar container */
+/* Navbar*/
 .navbar {
   max-width: 1200px;
   margin: auto;
@@ -57,17 +57,17 @@ body {
   padding: 0.8rem 2rem;
   border-radius: 16px;
 
-  background: rgba(255, 255, 255, 0.05);  /* glassy effect */
+  background: rgba(255, 255, 255, 0.05);  
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
 
   border: 1px solid rgba(255, 255, 255, 0.12);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
 
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
 }
 
-/* Logo */
+
 .logo {
   display: flex;
   align-items: center;
@@ -76,13 +76,16 @@ body {
 }
 
 .logo img {
-  height: 36px;
+  height: 30px;
+  width: 30px;
+  object-fit: contain;
+
 }
 
 .logo span {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #00FFFF;   /* neon cyan */
+  color: goldenrod;   
   letter-spacing: 0.3px;
 }
 
@@ -101,7 +104,7 @@ body {
   transition: all 0.3s ease;
 }
 
-/* Neon underline effect */
+/* underline  */
 .nav-links a::after {
   content: "";
   position: absolute;
@@ -109,13 +112,13 @@ body {
   bottom: -4px;
   width: 0;
   height: 2px;
-  background: #00FFFF; /* neon cyan */
-  box-shadow: 0 0 8px #00FFFF;
+  background: goldenrod; 
+  box-shadow: 0 0 8px goldenrod;
   transition: width 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: #00FFFF;
+  color: goldenrod;
 }
 
 .nav-links a:hover::after {
@@ -125,12 +128,12 @@ body {
 /* Responsive: small screens */
 @media (max-width: 768px) {
   .nav-links {
-    display: none; /* can add hamburger later */
+    display: none; 
   }
 }
 
-/* Optional: hover glow on navbar */
+
 .navbar:hover {
-  box-shadow: 0 12px 40px rgba(0, 255, 255, 0.35);
-  border-color: rgba(0, 255, 255, 0.25);
+  box-shadow:  0 12px 40px goldenrod;
+  border-color: goldenrod;
 }
