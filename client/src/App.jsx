@@ -1,4 +1,3 @@
-
 import "./App.css";
 import logoImg from "./assets/logo2.png";
 
@@ -21,7 +20,7 @@ function App() {
       </header>
 
       <main>
-        {/* Page content */}
+        
       </main>
     </>
   );
