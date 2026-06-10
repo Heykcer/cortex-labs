@@ -1,0 +1,58 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id       String @id @default(cuid())
+  username String @unique
+  password String // Hashed password
+}
+
+model TeamMember {
+  id           String    @id @default(cuid())
+  name         String
+  position     String
+  dateOfJoin   DateTime
+  image        String?   // Base64 encoded image or URL
+  portfolioUrl String?
+  resumeUrl    String?
+  projects     Project[] // Relation to projects
+}
+
+model Project {
+  id          String       @id @default(cuid())
+  title       String
+  description String
+  link        String?
+  techStack   String       // Comma separated or JSON string
+  status      String       // e.g., "In Progress", "Completed"
+  teamMembers TeamMember[] // Team members working on this project
+}
+
+model Hackathon {
+  id          String   @id @default(cuid())
+  name        String
+  date        DateTime
+  result      String?  // e.g., "1st Place", "Participant"
+  description String
+}
+
+model Event {
+  id          String   @id @default(cuid())
+  name        String
+  date        DateTime
+  description String
+  location    String?
+}
+
+model Competition {
+  id          String   @id @default(cuid())
+  name        String
+  date        DateTime
+  result      String?
+  description String
+}
